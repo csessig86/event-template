@@ -1,4 +1,4 @@
-Tabletop to event template
+Tabletop to mobile site
 ===========
 * [Live demo](http://wcfcourier.com/app/special/event-template)
 
