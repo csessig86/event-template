@@ -116,8 +116,10 @@ Customize
 
 Few other things
 ===========
-* A few other things you'll want to change: Add the right metadata attributes at the top of our index.html page.
+* A few other things you'll want to change: Add the right metadata attributes at the top of our index.html page. Also, you can
 
 * Then change the Facebook and Twitter buttons. The [Facebook button](https://developers.facebook.com/docs/reference/plugins/like/) goes on line 176. in the index.html file and the [Twitter button](https://twitter.com/about/resources/buttons) goes on line 204.
 
-* Finally, get rid of our Courier logo or add your own. That's located on line 191 in index.html.
+* Get rid of our Courier logo or add your own. That's located on line 191 in index.html.
+
+* Finally, add your own iOS icon if you want. The one for this app is located is images/ios-icon.png
