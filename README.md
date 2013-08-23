@@ -114,6 +114,10 @@ Customize
    	{{/if}}
    	```
 
-Metadata and social media buttons
+Few other things
 ===========
-* The last things you'll need to change is to set the right metadata attributes at the top of our index.html page. Then change the Facebook and Twitter buttons. The [Facebook button](https://developers.facebook.com/docs/reference/plugins/like/) goes on line 176. in the index.html file and the [Twitter button](https://twitter.com/about/resources/buttons) goes on line 204.
+* A few other things you'll want to change: Add the right metadata attributes at the top of our index.html page.
+
+* Then change the Facebook and Twitter buttons. The [Facebook button](https://developers.facebook.com/docs/reference/plugins/like/) goes on line 176. in the index.html file and the [Twitter button](https://twitter.com/about/resources/buttons) goes on line 204.
+
+* Finally, get rid of our Courier logo or add your own. That's located on line 191 in index.html.
