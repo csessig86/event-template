@@ -12,10 +12,10 @@ Setting up Tabletop
 ===========
 * Follow the [Tabletop.js instructions](http://builtbybalance.com/Tabletop/#tabletop-instructions) for setting up the spreadsheet and publishing it.
 
-* The spreadsheet used in the example is found [here](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dFpSMTBURXFCQXBkeWp4MGJVVzZ1SHc#gid=0).
+* The spreadsheet used in the example is found [here](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E#gid=3).
 
 * Open up the js/loadpageinfo.js file and add your spreadsheet ID as a value to the spreadsheetKey key in the initializeTabletopObject. This is on line 37 of the file.
-	initializeTabletopObject('0As3JvOeYDO50dFpSMTBURXFCQXBkeWp4MGJVVzZ1SHc');
+	initializeTabletopObject('0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E');
 
 * Also make sure you change the "title" attribute in the "context" variable in the js/loadpage.info.js file. It's at the very top of the page.
 
