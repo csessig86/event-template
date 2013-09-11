@@ -1,6 +1,6 @@
 // Page information that we will build on
 var context = {
-	"title": "Irish Fest",
+	"title": "NCC",
 	"meta": [],
 	"sections": []
 };
@@ -33,7 +33,7 @@ var templates = [
 // First we'll initialize Tabletop with our spreadsheet
 var jqueryNoConflict = jQuery;
 jqueryNoConflict(document).ready(function(){
-	initializeTabletopObject('0As3JvOeYDO50dFpSMTBURXFCQXBkeWp4MGJVVzZ1SHc');
+	initializeTabletopObject('0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E');
 });
 
 // Pull data from Google spreadsheet

@@ -19,7 +19,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Headlines */
 h3 {
 	margin: 0 0 10px 0;
-	color: #D95F0E;
+	color: #01665E;
 	border-bottom: 1px ridge #ddd;
 }
 
@@ -61,7 +61,7 @@ hr {
 .header-footer {
 	position: fixed;
 	width: 100%;
-	background-color: #1A9850;
+	background-color: #744308;
 	color: #ffffff;
 	z-index: 100000;
 	font-size: 12px;
@@ -112,7 +112,6 @@ hr {
 }
 
 #footer_container .nav-button {
-	background-color: #1A9850;
 	float: left;
     padding-top: 2px;
     box-shadow: 0px 1px 3px 0px rgb(255, 255, 255);
@@ -193,19 +192,6 @@ hr {
 	margin-left: 5px;
 }
 
-#search-header {
-	background-color: #1A9850;
-	color: #ffffff;
-	padding-left: 5px;
-	padding-top: 10px;
-	padding-bottom: 5px;
-	font-size: 17.5px;
-	border: 1px solid #bbb;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-}
-
 .ui-input-text {
 	width: 275px;
 }
@@ -228,7 +214,6 @@ hr {
 .table {
 	float: left;
 	margin-top: 10px;
-	margin-bottom: 200px;
 }
 		
 .table th, .table td {
@@ -268,6 +253,9 @@ hr {
 	text-shadow: 0 /*{c-body-shadow-x}*/ 0px /*{c-body-shadow-y}*/ 0 /*{c-body-shadow-radius}*/ #fff /*{c-body-shadow-color}*/;
 }
 
+.schedule-box {
+	margin-bottom: 200px;
+}
 
 /***** Map styles *****/
 .map-box {

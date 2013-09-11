@@ -57,14 +57,14 @@ function hashChange() {
 	// Change the other DIVs in the nav bar so they have the default background color
 	if (hash !== '#' + scheduleName + '-map') {
 		// This changes the color of the button that was clicked
-		$(hash + '-nav-link').css('background-color', '#136c39');
+		$(hash + '-nav-link').css('background-color', '#5c3506');
 		// This sets the other buttons to the default color
-		$(hash + '-nav-link').parent().parent().siblings().children().children().css('background-color', '#1A9850');
+		$(hash + '-nav-link').parent().parent().siblings().children().children().css('background-color', '#744308');
 	} else {
 		// This changes the color of the button that was clicked
-		$('#' + scheduleName + '-nav-link').css('background-color', '#136c39');
+		$('#' + scheduleName + '-nav-link').css('background-color', '#5c3506');
 		// This sets the other buttons to the default color
-		$('#' + scheduleName + '-nav-link').parent().parent().siblings().children().children().css('background-color', '#1A9850');
+		$('#' + scheduleName + '-nav-link').parent().parent().siblings().children().children().css('background-color', '#744308');
 	}
 }
 

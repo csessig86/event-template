@@ -9,6 +9,7 @@ var markerGroup = new L.FeatureGroup;
 
 // Function that creates the map
 function createMap() {
+   console.log('test');
    // Grab the icon information from our Google spreadsheet
    var icons = "";
    var scheduleName = "";
@@ -24,11 +25,9 @@ function createMap() {
 		center: [42.500555, -92.33349],
 		zoom: 10
 	});
-	
-	var basetileUrl = "http://{s}.tile.cloudmade.com/8c54f5c0737445078a28d52682bb7622/104133/256/{z}/{x}/{y}.png";
-	basetileAttribution = '2013 CloudMade - Map data ODbL 2013 OpenStreetMap.org contributors';
-	basetile = new L.TileLayer(basetileUrl, { attribution: basetileAttribution});
-	map.addLayer(basetile);
+	map.invalidateSize();
+   
+	L.tileLayer.provider('Esri.WorldImagery').addTo(map);
 
 	// Creates the marker, place it on the map
 	// And give it a popup box
@@ -92,4 +91,5 @@ function createMap() {
    	// Then use that to center the map
 	// Add a little bit of padding to make sure all icons fit onto mobile screens
 	map.fitBounds(markerBounds.pad(0.5));
+
 }
