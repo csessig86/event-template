@@ -118,7 +118,7 @@ Few other things
 ===========
 * A few other things you'll want to change: Add the right metadata attributes at the top of our index.html page. Also, you can
 
-* Then change the Facebook and Twitter buttons. The [Facebook button](https://developers.facebook.com/docs/reference/plugins/like/) goes on line 176. in the index.html file and the [Twitter button](https://twitter.com/about/resources/buttons) goes on line 204.
+* Then change the 'data-href' attribute for the [Facebook button](https://developers.facebook.com/docs/reference/plugins/like/) to the URL of the page. This is on line 202 in the index.html file. And change the 'data-via' attribute for the [Twitter button](https://twitter.com/about/resources/buttons) to reflect your organization. This is on line 204 in the index.html file.
 
 * Get rid of our Courier logo or add your own. That's located on line 191 in index.html.
 
