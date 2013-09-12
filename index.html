@@ -1,151 +1,236 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Event-template by csessig86</title>
+  <title>Guide to the National Cattle Congress Fair | WCFCourier.com</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+  <link rel="shortcut icon" href="http://wcfcourier.com/favicon.ico" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Event-template</h1>
-        <p>Use a Google spreadsheet to power a mobile site.</p>
+  <!-- Mobile meta tags-->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="images/ios-icon.png"/>
+	<meta http-equiv="cleartype" content="on">
 
-        <p class="view"><a href="https://github.com/csessig86/event-template">View the Project on GitHub <small>csessig86/event-template</small></a></p>
+  <!-- Facebook meta tags-->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://wcfcourier.com/app/ncc/">
+  <meta property="og:title" content="Guide to the National Cattle Congress"/>
+  <meta property="og:image" content="http://bloximages.chicago2.vip.townnews.com/wcfcourier.com/content/tncms/assets/v3/editorial/2/26/226091bc-10b7-11e3-b5da-0019bb2963f4/521f5a6824fa0.preview-620.jpg"/>
+  <meta property="og:site_name" content="WCFCourier"/>
+  <meta property="og:description" content="The National Cattle Congress fair will take place Sept. 12-15 and will feature live music, a carnival, kids activities, livestock and art shows and more." />
+
+  <!-- Twitter meta tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@WCFCourier">
+  <meta name="twitter:creator" content="@CourierEssig">
+  <meta name="twitter:title" content="Guide to the National Cattle Congress">
+  <meta name="twitter:description" content="The National Cattle Congress fair will take place Sept. 12-15 and will feature live music, a carnival, kids activities, livestock and art shows and more.">
+  <meta name="twitter:image" content="http://bloximages.chicago2.vip.townnews.com/wcfcourier.com/content/tncms/assets/v3/editorial/2/26/226091bc-10b7-11e3-b5da-0019bb2963f4/521f5a6824fa0.preview-620.jpg">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/lib/jquery.mobile-1.3.1.css" />
+  <link rel="stylesheet" type="text/css" href="css/lib/reset.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/lib/bootstrap-responsive.min.css" />
+  <link rel="stylesheet" href="css/lib/font-awesome.css" />
+  <link rel="stylesheet" href="css/lib/leaflet.awesome-markers.css" />
+  <link rel="stylesheet" href="css/lib/leaflet.css" />
+  <!--[if lte IE 8]>
+  	<link rel="stylesheet" href="css/lib/font-awesome-ie7.min.css" />
+  	<link rel="stylesheet" href="css/lib/leaflet.ie.css" />
+  <![endif]-->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Javascript --> 
+  <script type="text/javascript" src="js/lib/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery.mobile-1.3.1.js"></script>
+  <script type="text/javascript" src="js/lib/leaflet.js"></script>
+  <script type="text/javascript" src="js/lib/leaflet-providers.js"></script>
+  <script type="text/javascript" src="js/lib/leaflet.awesome-markers.min.js"></script>
+  <script type="text/javascript" src="js/lib/handlebars.js"></script>
+  <script type="text/javascript" src="js/lib/tabletop.js"></script>
+  
+  <!-- Google + script -->
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+  <!-- Templates -->
+  <script id="sections-template" type="text/x-handlebars-template">
+    {{#each sections}}
+      <div id="{{{ sectionname }}}-box">
+        {{#if article}}
+          {{#each article}}
+            {{#if header}}
+              <h3 class="boxes-sections-headers">{{{ header }}}</h3>
+            {{/if}}
 
 
-        <ul>
-          <li><a href="https://github.com/csessig86/event-template/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/csessig86/event-template/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/csessig86/event-template">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a name="tabletop-to-mobile-site" class="anchor" href="#tabletop-to-mobile-site"><span class="octicon octicon-link"></span></a>Tabletop to mobile site</h1>
+            {{#if subhead}}
+              <h5>{{{ subhead }}}</h5>
+            {{/if}}
+            
+            {{#if image}}
+              {{#if image-placement-right}}
+                <div class='Info-box-image-box Info-box-image-box-right'>
+              {{else}}
+                <div class='Info-box-image-box Info-box-image-box-left'>
+              {{/if}}
 
-<ul>
-<li><p><a href="http://wcfcourier.com/app/special/event-template">Live demo</a></p></li>
-<li><p>Uses <a href="http://builtbybalance.com/Tabletop/">Tabletop.js</a> and a <a href="https://docs.google.com/spreadsheet/pub?key=0As3JvOeYDO50dF9NWWRiaTdqNmdKQ1lCY3dpdDhZU3c&amp;output=html">Google Spreadsheet</a> to feed data to a mobile site, which is templated with <a href="http://handlebarsjs.com/">Handlebars.js</a>. The Google Spreadsheet basically works as a CMS to power the site.</p></li>
-<li><p>Besides Tabletop.js, the template utilizes the <a href="http://twitter.github.io/bootstrap/">Bootstrap</a> framework, <a href="http://leafletjs.com/">Leaflet</a> for the "map" template and <a href="http://api.jquerymobile.com/">jQueryMobile</a> for the "schedule" template and <a href="http://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a> and Leaflet's <a href="https://github.com/lvoogdt/Leaflet.awesome-markers">Awesome Markers plugin</a> for the icons.</p></li>
-<li><p>The original idea behind the app was to power websites that serve as a guide for weekend festivals. Therefore, the initial template has a page with an article introducing the festival, a page for a schedule of events, a page with a map of festival stages and a page with more information on the festival. The app can be tweaked, however, to find your needs.</p></li>
-</ul><h1>
-<a name="setting-up-tabletop" class="anchor" href="#setting-up-tabletop"><span class="octicon octicon-link"></span></a>Setting up Tabletop</h1>
+                  <img src='{{{ image }}}' />
+                  {{#if image-caption}}
+                    <div class='caption'>{{{ image-caption }}}</div>
+                  {{/if}}
+                </div>
+            {{/if}}
 
-<ul>
-<li><p>Follow the <a href="http://builtbybalance.com/Tabletop/#tabletop-instructions">Tabletop.js instructions</a> for setting up the spreadsheet and publishing it.</p></li>
-<li><p>The spreadsheet used in the example is found <a href="https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E#gid=3">here</a>.</p></li>
-<li><p>Open up the js/loadpageinfo.js file and add your spreadsheet ID as a value to the spreadsheetKey key in the initializeTabletopObject. This is on line 37 of the file.
-initializeTabletopObject('0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E');</p></li>
-<li><p>Also make sure you change the "title" attribute in the "context" variable in the js/loadpage.info.js file. It's at the very top of the page.</p></li>
-</ul><h1>
-<a name="setting-up-the-google-doc" class="anchor" href="#setting-up-the-google-doc"><span class="octicon octicon-link"></span></a>Setting up the Google Doc</h1>
+            {{#if more}}
+                <p>{{{ more }}}</p>
+            {{/if}}
 
-<ul>
-<li><p><a href="https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dFpSMTBURXFCQXBkeWp4MGJVVzZ1SHc#gid=0">Example spreadsheet</a>.</p></li>
-<li><p>The first page of worksheet of you spreadsheet will be titled 'core'. This is where you lay out what pages you want in your app. Sectionname is the name you want to appear in the nav box at the bottom of the page. Sectionicon is the name of the <a href="http://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a> icon you want to display in the nav box.</p></li>
-<li><p>Note: You can have as many or as few pages in the app as you want.</p></li>
-<li><p>Currently we have three template types, which each have their own column in the 'core' worksheet: <a href="http://wcfcourier.com/app/special/event-template/#Article">Article</a>, <a href="http://wcfcourier.com/app/special/event-template/#Schedule">Schedule</a> and <a href="http://wcfcourier.com/app/special/event-template/#Map">map</a>. Put the value "TRUE" in one of those three columns to determine how your page will be templated.</p></li>
-<li><p>Each value under 'sectionname' must have its own worksheet in the Google spreadsheet. This is where you add the content for each page.</p></li>
-</ul><h1>
-<a name="templates" class="anchor" href="#templates"><span class="octicon octicon-link"></span></a>Templates</h1>
 
-<ul>
-<li><p>Article templates have the following columns for each section on the page: 'header', 'subhead', 'image', 'image-placement-right' (either "TRUE" OR "FALSE"), 'more' and 'caption'. You can leave columns blank that you don't want to use. You can also add as many rows as you want, depending on how many sections on the page you have. Check out the <a href="http://wcfcourier.com/app/special/event-template/#Info">info page on our Irish Fest app</a> and our 'info' worksheet on the <a href="https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dFpSMTBURXFCQXBkeWp4MGJVVzZ1SHc#gid=0">Google spreadsheet</a> for a good example of this in practice.</p></li>
-<li><p>Schedule templates have two columns: 'box-number' and 'date'. Each row in the column 'box-number' should have it's own worksheet as well. So the you'll notice in the <a href="https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dFpSMTBURXFCQXBkeWp4MGJVVzZ1SHc#gid=0">Google spreadsheet</a> that we have a worksheet called 'Schedule' that has rows 'first-schedule,' 'second-schedule,' etc. We also have worksheets called 'first-schedule,' 'second-schedule,' etc. The schedule worksheets have the following columns: 'time', 'event', 'location', 'category' and 'info'. Each row is equal to an event.</p></li>
-<li><p>Map templates have the following options: 'icon', 'iconcolor', 'lat', 'long', 'popup' and 'searchschedule' (either "TRUE" or "FALSE"). Each row is related to a marker on the map. The 'icon' column is the name of <a href="http://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a> icon you want to show up as the marker. The 'iconcolor; column is one of the colors made available with Leaflet's <a href="https://github.com/lvoogdt/Leaflet.awesome-markers">Awesome Markers plugin</a>. The 'lat' and 'long' columns are related to the latitude and longitude coordinates of the markers. The 'popup' column is the text that will show when a user clicks a marker.</p></li>
-<li><p>The 'searchschedule' column can be useful if you are using the app as a guide to a festival and the map has stages on it with different events going on throughout the day. If those events are on the page with the schedule on it and the stage name is noted in the 'location' column, you can set the 'searchschedule' column to "TRUE". When this is done, a link will appear in the popup box that says 'Search through events at this location'. When a reader clicks this link, they will be taken to the page with the schedule and all the events that are going on that stage.</p></li>
-<li><p>For instance, in our <a href="http://wcfcourier.com/app/special/event-template/#Map">demo</a> we have a stage called Park Avenue Stage with events going on throughout the day and a marker on the map for that stage (it's orange). Click the marker and then click the link in the popup to search the 'searchschedule' option in action.</p></li>
-</ul><h1>
-<a name="customize" class="anchor" href="#customize"><span class="octicon octicon-link"></span></a>Customize</h1>
+            {{#if caption}}
+              <h6>{{{ caption }}}</h6>
+            {{/if}}
 
-<ul>
-<li><p>You can customize the app as you see fit. Here's a few options you may want to change.</p></li>
-<li>
-<p>To change the color of the header and footer of the app (which is currently set to green), go to line 61 in the css/styles.css file and change the background color to something other than '#1A9850'. You can also set the color of the text with the 'color' attribute. Then open up the js/script.js file and go to lines 60 and 65. It should look like so:</p>
+          {{/each}}
+        {{/if}}
+        
+        {{#if schedule}}
+          <div class="schedule-box">
+            <div id="search-bar-paragraph">
+              <h3>Search for events</h3>
+              <input type="text" placeholder="Type here to search..." id="search"/>
+              <p>You can search by location ("{{{ schedule.0.events.4.location }}}"), event ("{{{ schedule.0.events.1.event }}}") or category ("{{{ schedule.0.events.3.category }}}").</p>
+              <br />
+              <div id="filteroptions">
+                <p>Filter the results by days:</p>
+                <fieldset id="optionsfieldset" data-role="controlgroup" data-mini="true">
+                  {{#each schedule}}
+                    <input type="checkbox" id="{{{ box-number }}}" class="filter_boxes" name="{{{ box-number }}}" checked />
+                    <label for="{{{ box-number }}}">{{{ date }}}</label>
+                  {{/each}}
+                </fieldset>
+              </div>
+            </div>
 
-<div class="highlight highlight-javascript"><pre><span class="c1">// Change background color of selected section in nav bar</span>
-<span class="c1">// Change the other DIVs in the nav bar so they have the default background color</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">hash</span> <span class="o">!==</span> <span class="s1">'#'</span> <span class="o">+</span> <span class="nx">scheduleName</span> <span class="o">+</span> <span class="s1">'-map'</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// This changes the color of the button that was clicked</span>
-    <span class="nx">$</span><span class="p">(</span><span class="nx">hash</span> <span class="o">+</span> <span class="s1">'-nav-link'</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">'background-color'</span><span class="p">,</span> <span class="s1">'#136c39'</span><span class="p">);</span>
-    <span class="c1">// This sets the other buttons to the default color</span>
-    <span class="nx">$</span><span class="p">(</span><span class="nx">hash</span> <span class="o">+</span> <span class="s1">'-nav-link'</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">parent</span><span class="p">().</span><span class="nx">siblings</span><span class="p">().</span><span class="nx">children</span><span class="p">().</span><span class="nx">children</span><span class="p">().</span><span class="nx">css</span><span class="p">(</span><span class="s1">'background-color'</span><span class="p">,</span> <span class="s1">'#1A9850'</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="c1">// This changes the color of the button that was clicked</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#'</span> <span class="o">+</span> <span class="nx">scheduleName</span> <span class="o">+</span> <span class="s1">'-nav-link'</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">'background-color'</span><span class="p">,</span> <span class="s1">'#136c39'</span><span class="p">);</span>
-    <span class="c1">// This sets the other buttons to the default color</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">'#'</span> <span class="o">+</span> <span class="nx">scheduleName</span> <span class="o">+</span> <span class="s1">'-nav-link'</span><span class="p">).</span><span class="nx">parent</span><span class="p">().</span><span class="nx">parent</span><span class="p">().</span><span class="nx">siblings</span><span class="p">().</span><span class="nx">children</span><span class="p">().</span><span class="nx">children</span><span class="p">().</span><span class="nx">css</span><span class="p">(</span><span class="s1">'background-color'</span><span class="p">,</span> <span class="s1">'#1A9850'</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</li>
-<li><p>This is the part of the script that changes the background color when a user clicks on one of the buttons. You can change it from it's current value of '#136c39'. Then go to lines 62 and 67. This sets the color back to its default. So whatever you set the color to in the css/styles.css file, set it here as well.</p></li>
-<li><p>If you want to change the header colors, check out lines 20 through 38 in the css/styles.css. They are all labeled.</p></li>
-<li><p>Similarly, all the styles for the schedule page start on line 187 in css/styles.css file.</p></li>
-<li><p>Want to make your own templates? First, familiarize yourself with <a href="http://handlebarsjs.com/">Handlebars.js</a> if you aren't already. Then create a template name and add it as a column in the 'core' worksheet after 'map.' Then create a new row, create a 'sectionname' and set the value of "TRUE" to the new template name. Now create a worksheet with the same name as the 'sectionname' and add columns for the new template that you want to show up on your page.</p></li>
-<li><p>Then open up the index.html and go to line 150, which is after the '{{#if map}}...{{/if}}' statement but before the final ''. This is where you will add a new if statement for your template name. For instance, if your new template is called 'list', then you would add a '{{#if list}}...{{/if}' statement here. Now you can create a Handlebars.js template.</p></li>
-<li>
-<p>To give you an idea of what it should look like, here's my 'article' template. Notice how the 'header,' 'subhead,' 'image,' etc. attributes from my spreadsheet are used in the template.</p>
+            <div id="schedule_box_events">
+              {{#each schedule}}
+                <div id='{{{ box-number }}}-box'>
+                  <h3>{{{ date }}}</h3>
+                  <table class="tblData table table-striped">
+                    <tbody>
+                      {{#each events}}
+                      <tr>
+                        <td class="schedule-cells">
+                        <div class="schedule-cells-time-stamp">{{{ time }}}</div>
+                        <div class="schedule-cells-event">{{{ event }}}</div>
+                        <div class="schedule-cells-location">{{{ location }}}</div>
+                        <div class="schedule-cells-category"><strong>Category:</strong> {{{ category }}}</div>
+                        <div class="schedule-cells-info">{{{ info }}}</div>
+                        </td>
+                      </tr>
+                      {{/each}}
+                    </tbody>
+                  </table>
+                </div>
+              {{/each}}
+            </div>
+          </div>
+        {{/if}}
 
-<div class="highlight highlight-javascript"><pre><span class="p">{{</span><span class="err">#</span><span class="k">if</span> <span class="nx">article</span><span class="p">}}</span>
-    <span class="p">{{</span><span class="err">#</span><span class="nx">each</span> <span class="nx">article</span><span class="p">}}</span>
-        <span class="p">{{</span><span class="err">#</span><span class="k">if</span> <span class="nx">header</span><span class="p">}}</span>
-            <span class="o">&lt;</span><span class="nx">h3</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"boxes-sections-headers"</span><span class="o">&gt;</span><span class="p">{{{</span> <span class="nx">header</span> <span class="p">}}}</span><span class="o">&lt;</span><span class="err">/h3&gt;</span>
-        <span class="p">{{</span><span class="err">/if}}</span>
+        {{#if map}}
+          <div class="map-box">
+            <div id="legend-toggle-button" class="toggle_description btn icon-info-sign"></div>
+            <div id="map-container"></div>
+          </div>
+        {{/if}}
 
-        <span class="p">{{</span><span class="err">#</span><span class="k">if</span> <span class="nx">subhead</span><span class="p">}}</span>
-            <span class="o">&lt;</span><span class="nx">h5</span><span class="o">&gt;</span><span class="p">{{{</span> <span class="nx">subhead</span> <span class="p">}}}</span><span class="o">&lt;</span><span class="err">/h5&gt;</span>
-        <span class="p">{{</span><span class="err">/if}}</span>
+        {{! ENTER NEW TEMPLATES HERE }}
 
-        <span class="p">{{</span><span class="err">#</span><span class="k">if</span> <span class="nx">image</span><span class="p">}}</span>
-            <span class="p">{{</span><span class="err">#</span><span class="k">if</span> <span class="nx">image</span><span class="o">-</span><span class="nx">placement</span><span class="o">-</span><span class="nx">right</span><span class="p">}}</span>
-            <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s1">'Info-box-image-box Info-box-image-box-right'</span><span class="o">&gt;</span>
-          <span class="p">{{</span><span class="k">else</span><span class="p">}}</span>
-            <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s1">'Info-box-image-box Info-box-image-box-left'</span><span class="o">&gt;</span>
-          <span class="p">{{</span><span class="err">/if}}</span>
+      </div>
+    {{/each}}
+  </script>
 
-              <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="s1">'{{{ image }}}'</span> <span class="o">/&gt;</span>
-              <span class="p">{{</span><span class="err">#</span><span class="k">if</span> <span class="nx">image</span><span class="o">-</span><span class="nx">caption</span><span class="p">}}</span>
-                <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s1">'caption'</span><span class="o">&gt;</span><span class="p">{{{</span> <span class="nx">image</span><span class="o">-</span><span class="nx">caption</span> <span class="p">}}}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
-              <span class="p">{{</span><span class="err">/if}}</span>
-            <span class="o">&lt;</span><span class="err">/div&gt;</span>
-        <span class="p">{{</span><span class="err">/if}}</span>
+  <script id="navbox-template" type="text/x-handlebars-template">
+    {{#each sections}}
+      <a href="#{{{ sectionname }}}" data-ajax="false">
+        <div class="nav-button nav-button-border">
+          <div id="{{{ sectionname }}}-nav-link">
+            <i class="{{{ sectionicon }}}"></i>
+            <br />
+            {{{ sectionname }}}
+          </div>
+        </div>
+      </a>
+    {{/each}}
+  </script>
 
-        <span class="p">{{</span><span class="err">#</span><span class="k">if</span> <span class="nx">more</span><span class="p">}}</span>
-            <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">{{{</span> <span class="nx">more</span> <span class="p">}}}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-        <span class="p">{{</span><span class="err">/if}}</span>
+  <script id="guide-to-template" type="text/x-handlebars-template">
+    <h4>Guide to {{{ title }}}</h4>
+  </script>
+</head>
 
-        <span class="p">{{</span><span class="err">#</span><span class="k">if</span> <span class="nx">caption</span><span class="p">}}</span>
-          <span class="o">&lt;</span><span class="nx">h6</span><span class="o">&gt;</span><span class="p">{{{</span> <span class="nx">caption</span> <span class="p">}}}</span><span class="o">&lt;</span><span class="err">/h6&gt;</span>
-        <span class="p">{{</span><span class="err">/if}}</span>
+<body>
+  <!-- Facebook button -->
+  <div id="fb-root"></div>
+  <script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=148866255208434";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
 
-    <span class="p">{{</span><span class="err">/each}}</span>
-<span class="p">{{</span><span class="err">/if}}</span>
-</pre></div>
-</li>
-</ul><h1>
-<a name="few-other-things" class="anchor" href="#few-other-things"><span class="octicon octicon-link"></span></a>Few other things</h1>
-
-<ul>
-<li><p>A few other things you'll want to change: Add the right metadata attributes at the top of our index.html page. Also, you can</p></li>
-<li><p>Then change the 'data-href' attribute for the <a href="https://developers.facebook.com/docs/reference/plugins/like/">Facebook button</a> to the URL of the page. This is on line 202 in the index.html file. And change the 'data-via' attribute for the <a href="https://twitter.com/about/resources/buttons">Twitter button</a> to reflect your organization. This is on line 204 in the index.html file.</p></li>
-<li><p>Get rid of our Courier logo or add your own. That's located on line 191 in index.html.</p></li>
-<li><p>Finally, add your own iOS icon if you want. The one for this app is located is images/ios-icon.png</p></li>
-</ul>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/csessig86">csessig86</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+   <!-- Header -->
+  <div id="header_container" class="header-footer">
+    <a href="http://wcfcourier.com/">
+      <img src="images/WCFCourier_LOGO_BW_300px.png" style="height: 15px; float: right; padding-top: 5px;" />
+    </a>
+  </div>
+  
+  <!-- Content -->
+  <div id="content_box"> 
+    <div id="share">
+      <ul>
+        <!-- Facebook button cont. -->
+        <li id="facebook-icon" class="float_left">
+          <div class="fb-like" data-href="http://wcfcourier.com/app/ncc/" data-width="125" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+        </li>
+        <li class="float_left">
+          <!-- Twitter button -->
+          <a href="https://twitter.com/share" class="twitter-share-button" data-via="WCFCourier">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+          </script>
+        </li>
+        <li>
+          <g:plusone size="medium"></g:plusone>
+        </li>
+      </ul>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+
+    <div id="content"></div>
+  </div>
+
+  <div id='footer_container' class='header-footer'></div>
+
+  <div class="description_box box-shadow">
+    <div class="x_button toggle_description btn icon-remove"></div>
+    <div class="description_box_content">
+      <p>This map shows the park and venues where events are being held.</p>
+      <div class="description_box_text"></div>
+    </div>
+  </div>
+  <div class="description_box_cover"></div>
+  
+  <!-- Custom Javascript -->
+  <script src="js/loadpageinfo.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/map.js"></script>
+
+</body>
 </html>
