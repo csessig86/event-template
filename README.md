@@ -2,7 +2,7 @@ Tabletop to mobile site
 ===========
 * [Live demo](http://csessig86.github.io/event-template/)
 
-* Uses [Tabletop.js](http://builtbybalance.com/Tabletop/) and a [Google Spreadsheet](https://docs.google.com/spreadsheet/pub?key=0As3JvOeYDO50dF9NWWRiaTdqNmdKQ1lCY3dpdDhZU3c&output=html) to feed data to a mobile site, which is templated with [Handlebars.js](http://handlebarsjs.com/). The Google Spreadsheet basically works as a CMS to power the site.
+* Uses [Tabletop.js](http://builtbybalance.com/Tabletop/) and a Google Spreadsheet to feed data to a mobile site, which is templated with [Handlebars.js](http://handlebarsjs.com/). The Google Spreadsheet basically works as a CMS to power the site.
 
 * Besides Tabletop.js, the template utilizes the [Bootstrap](http://twitter.github.io/bootstrap/) framework, [Leaflet](http://leafletjs.com/) for the "map" template and [jQueryMobile](http://api.jquerymobile.com/) for the "schedule" template and [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/) and Leaflet's [Awesome Markers plugin](https://github.com/lvoogdt/Leaflet.awesome-markers) for the icons.
 
@@ -22,8 +22,6 @@ Setting up Tabletop
 
 Setting up the Google Doc
 ===========
-* [Example spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dFpSMTBURXFCQXBkeWp4MGJVVzZ1SHc#gid=0).
-
 * The first page of worksheet of you spreadsheet will be titled 'core'. This is where you lay out what pages you want in your app. Sectionname is the name you want to appear in the nav box at the bottom of the page. Sectionicon is the name of the [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/) icon you want to display in the nav box.
 
 * Note: You can have as many or as few pages in the app as you want.
@@ -35,9 +33,9 @@ Setting up the Google Doc
 
 Templates
 ===========
-* Article templates have the following columns for each section on the page: 'header', 'subhead', 'image', 'image-placement-right' (either "TRUE" OR "FALSE"), 'more' and 'caption'. You can leave columns blank that you don't want to use. You can also add as many rows as you want, depending on how many sections on the page you have. Check out the [info page on our Irish Fest app](http://csessig86.github.io/event-template//#Info) and our 'info' worksheet on the [Google spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dFpSMTBURXFCQXBkeWp4MGJVVzZ1SHc#gid=0) for a good example of this in practice.
+* Article templates have the following columns for each section on the page: 'header', 'subhead', 'image', 'image-placement-right' (either "TRUE" OR "FALSE"), 'more' and 'caption'. You can leave columns blank that you don't want to use. You can also add as many rows as you want, depending on how many sections on the page you have. Check out the [info page](http://csessig86.github.io/event-template//#Info) and our 'info' worksheet on the [Google spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E#gid=0) for a good example of this in practice.
 
-* Schedule templates have two columns: 'box-number' and 'date'. Each row in the column 'box-number' should have it's own worksheet as well. So the you'll notice in the [Google spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dFpSMTBURXFCQXBkeWp4MGJVVzZ1SHc#gid=0) that we have a worksheet called 'Schedule' that has rows 'first-schedule,' 'second-schedule,' etc. We also have worksheets called 'first-schedule,' 'second-schedule,' etc. The schedule worksheets have the following columns: 'time', 'event', 'location', 'category' and 'info'. Each row is equal to an event.
+* Schedule templates have two columns: 'box-number' and 'date'. Each row in the column 'box-number' should have it's own worksheet as well. So the you'll notice in the [Google spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E#gid=0) that we have a worksheet called 'Schedule' that has rows 'first-schedule,' 'second-schedule,' etc. We also have worksheets called 'first-schedule,' 'second-schedule,' etc. The schedule worksheets have the following columns: 'time', 'event', 'location', 'category' and 'info'. Each row is equal to an event.
 
 * Map templates have the following options: 'icon', 'iconcolor', 'lat', 'long', 'popup' and 'searchschedule' (either "TRUE" or "FALSE"). Each row is related to a marker on the map. The 'icon' column is the name of [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/) icon you want to show up as the marker. The 'iconcolor; column is one of the colors made available with Leaflet's [Awesome Markers plugin](https://github.com/lvoogdt/Leaflet.awesome-markers). The 'lat' and 'long' columns are related to the latitude and longitude coordinates of the markers. The 'popup' column is the text that will show when a user clicks a marker.
 
