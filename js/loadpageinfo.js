@@ -1,6 +1,6 @@
 // Page information that we will build on
 var context = {
-	"title": "NCC",
+	"title": "the NCC Fair",
 	"meta": [],
 	"sections": []
 };

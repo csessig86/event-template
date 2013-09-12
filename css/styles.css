@@ -253,9 +253,10 @@ hr {
 	text-shadow: 0 /*{c-body-shadow-x}*/ 0px /*{c-body-shadow-y}*/ 0 /*{c-body-shadow-radius}*/ #fff /*{c-body-shadow-color}*/;
 }
 
-.schedule-box {
+#fourth-schedule-box .table {
 	margin-bottom: 200px;
 }
+
 
 /***** Map styles *****/
 .map-box {
