@@ -1,6 +1,6 @@
 Tabletop to mobile site
 ===========
-* [Live demo](http://wcfcourier.com/app/special/event-template)
+* [Live demo](http://csessig86.github.io/event-template/)
 
 * Uses [Tabletop.js](http://builtbybalance.com/Tabletop/) and a [Google Spreadsheet](https://docs.google.com/spreadsheet/pub?key=0As3JvOeYDO50dF9NWWRiaTdqNmdKQ1lCY3dpdDhZU3c&output=html) to feed data to a mobile site, which is templated with [Handlebars.js](http://handlebarsjs.com/). The Google Spreadsheet basically works as a CMS to power the site.
 
@@ -28,14 +28,14 @@ Setting up the Google Doc
 
 * Note: You can have as many or as few pages in the app as you want.
 
-* Currently we have three template types, which each have their own column in the 'core' worksheet: [Article](http://wcfcourier.com/app/special/event-template/#Article), [Schedule](http://wcfcourier.com/app/special/event-template/#Schedule) and [map](http://wcfcourier.com/app/special/event-template/#Map). Put the value "TRUE" in one of those three columns to determine how your page will be templated.
+* Currently we have three template types, which each have their own column in the 'core' worksheet: [Article](http://csessig86.github.io/event-template//#Article), [Schedule](http://csessig86.github.io/event-template//#Schedule) and [map](http://csessig86.github.io/event-template//#Map). Put the value "TRUE" in one of those three columns to determine how your page will be templated.
 
 * Each value under 'sectionname' must have its own worksheet in the Google spreadsheet. This is where you add the content for each page.
 
 
 Templates
 ===========
-* Article templates have the following columns for each section on the page: 'header', 'subhead', 'image', 'image-placement-right' (either "TRUE" OR "FALSE"), 'more' and 'caption'. You can leave columns blank that you don't want to use. You can also add as many rows as you want, depending on how many sections on the page you have. Check out the [info page on our Irish Fest app](http://wcfcourier.com/app/special/event-template/#Info) and our 'info' worksheet on the [Google spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dFpSMTBURXFCQXBkeWp4MGJVVzZ1SHc#gid=0) for a good example of this in practice.
+* Article templates have the following columns for each section on the page: 'header', 'subhead', 'image', 'image-placement-right' (either "TRUE" OR "FALSE"), 'more' and 'caption'. You can leave columns blank that you don't want to use. You can also add as many rows as you want, depending on how many sections on the page you have. Check out the [info page on our Irish Fest app](http://csessig86.github.io/event-template//#Info) and our 'info' worksheet on the [Google spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dFpSMTBURXFCQXBkeWp4MGJVVzZ1SHc#gid=0) for a good example of this in practice.
 
 * Schedule templates have two columns: 'box-number' and 'date'. Each row in the column 'box-number' should have it's own worksheet as well. So the you'll notice in the [Google spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dFpSMTBURXFCQXBkeWp4MGJVVzZ1SHc#gid=0) that we have a worksheet called 'Schedule' that has rows 'first-schedule,' 'second-schedule,' etc. We also have worksheets called 'first-schedule,' 'second-schedule,' etc. The schedule worksheets have the following columns: 'time', 'event', 'location', 'category' and 'info'. Each row is equal to an event.
 
@@ -43,7 +43,7 @@ Templates
 
 * The 'searchschedule' column can be useful if you are using the app as a guide to a festival and the map has stages on it with different events going on throughout the day. If those events are on the page with the schedule on it and the stage name is noted in the 'location' column, you can set the 'searchschedule' column to "TRUE". When this is done, a link will appear in the popup box that says 'Search through events at this location'. When a reader clicks this link, they will be taken to the page with the schedule and all the events that are going on that stage.
 
-* For instance, in our [demo](http://wcfcourier.com/app/special/event-template/#Map) we have a stage called Park Avenue Stage with events going on throughout the day and a marker on the map for that stage (it's orange). Click the marker and then click the link in the popup to search the 'searchschedule' option in action.
+* For instance, in our [demo](http://csessig86.github.io/event-template//#Map) we have a stage called Park Avenue Stage with events going on throughout the day and a marker on the map for that stage (it's orange). Click the marker and then click the link in the popup to search the 'searchschedule' option in action.
 
 Customize
 ===========
