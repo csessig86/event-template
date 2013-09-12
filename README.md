@@ -12,7 +12,7 @@ Setting up Tabletop
 ===========
 * Follow the [Tabletop.js instructions](http://builtbybalance.com/Tabletop/#tabletop-instructions) for setting up the spreadsheet and publishing it.
 
-* The spreadsheet used in the example is found [here](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E#gid=3).
+* The spreadsheet used in the example is found [here](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E).
 
 * Open up the js/loadpageinfo.js file and add your spreadsheet ID as a value to the spreadsheetKey key in the initializeTabletopObject. This is on line 37 of the file.
 	initializeTabletopObject('0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E');
@@ -33,9 +33,9 @@ Setting up the Google Doc
 
 Templates
 ===========
-* Article templates have the following columns for each section on the page: 'header', 'subhead', 'image', 'image-placement-right' (either "TRUE" OR "FALSE"), 'more' and 'caption'. You can leave columns blank that you don't want to use. You can also add as many rows as you want, depending on how many sections on the page you have. Check out the [info page](http://csessig86.github.io/event-template/#Info) and our 'info' worksheet on the [Google spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E#gid=0) for a good example of this in practice.
+* Article templates have the following columns for each section on the page: 'header', 'subhead', 'image', 'image-placement-right' (either "TRUE" OR "FALSE"), 'more' and 'caption'. You can leave columns blank that you don't want to use. You can also add as many rows as you want, depending on how many sections on the page you have. Check out the [info page](http://csessig86.github.io/event-template/#Info) and our 'info' worksheet on the [Google spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E) for a good example of this in practice.
 
-* Schedule templates have two columns: 'box-number' and 'date'. Each row in the column 'box-number' should have it's own worksheet as well. So the you'll notice in the [Google spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E#gid=0) that we have a worksheet called 'Schedule' that has rows 'first-schedule,' 'second-schedule,' etc. We also have worksheets called 'first-schedule,' 'second-schedule,' etc. The schedule worksheets have the following columns: 'time', 'event', 'location', 'category' and 'info'. Each row is equal to an event.
+* Schedule templates have two columns: 'box-number' and 'date'. Each row in the column 'box-number' should have it's own worksheet as well. So the you'll notice in the [Google spreadsheet](https://docs.google.com/spreadsheet/ccc?key=0As3JvOeYDO50dE94QzNTUGJTcS1xQlJEYXZ3VHZXY0E) that we have a worksheet called 'Schedule' that has rows 'first-schedule,' 'second-schedule,' etc. We also have worksheets called 'first-schedule,' 'second-schedule,' etc. The schedule worksheets have the following columns: 'time', 'event', 'location', 'category' and 'info'. Each row is equal to an event.
 
 * Map templates have the following options: 'icon', 'iconcolor', 'lat', 'long', 'popup' and 'searchschedule' (either "TRUE" or "FALSE"). Each row is related to a marker on the map. The 'icon' column is the name of [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/) icon you want to show up as the marker. The 'iconcolor; column is one of the colors made available with Leaflet's [Awesome Markers plugin](https://github.com/lvoogdt/Leaflet.awesome-markers). The 'lat' and 'long' columns are related to the latitude and longitude coordinates of the markers. The 'popup' column is the text that will show when a user clicks a marker.
 
